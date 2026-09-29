@@ -1,5 +1,7 @@
 # DS Compass
 
+**Live demo:** https://ds-compass-sg-uk-niu.duoer001.chatgpt.site
+
 PE6201 individual project: evidence-led master's programme discovery for selected Singapore and United Kingdom programmes.
 
 ## What the prototype does
