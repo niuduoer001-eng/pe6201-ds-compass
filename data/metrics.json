@@ -1,0 +1,11 @@
+{
+  "evaluated_on":"2026-09-29",
+  "task":"Primary study-interest classification only; not admission prediction or programme eligibility.",
+  "test_set":"37 independently generated synthetic held-out cases. GPT-4.1 mini generated and labelled them before Gemini evaluation; one requested 42-case batch returned 37 valid cases and was frozen without supplementation.",
+  "model":"google/gemini-2.5-flash-lite",
+  "accuracy_pct":86.5,
+  "majority_class_baseline_pct":18.9,
+  "abstention_rate_pct":8.1,
+  "abstentions_that_would_be_errors":0,
+  "limitations":"Synthetic labels, small set, and model-generated test authoring are not independent human expert validation. Chinese retrieval remains constrained by English programme metadata."
+}
