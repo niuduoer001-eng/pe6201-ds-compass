@@ -1,0 +1,434 @@
+[
+  {
+    "id": "train-ai-01",
+    "text": "I want to develop neural networks for computer vision",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-02",
+    "text": "My goal is research in deep learning and intelligent agents",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-03",
+    "text": "I enjoy image recognition and training neural models",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-04",
+    "text": "I want advanced artificial intelligence theory and algorithms",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-05",
+    "text": "I hope to build language models and study natural language processing",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-06",
+    "text": "My interest is reinforcement learning for autonomous systems",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-07",
+    "text": "I have worked on object detection and want AI research training",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-08",
+    "text": "I aim to become a machine learning engineer building neural architectures",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-09",
+    "text": "I want to study visual perception and neural computation",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-10",
+    "text": "I am interested in robot intelligence and deep reinforcement methods",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-11",
+    "text": "I want expertise in generative models and image understanding",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-ai-12",
+    "text": "My goal is intelligent algorithms for video recognition",
+    "label": "ai",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-01",
+    "text": "I want to analyse datasets with statistics and predictive modelling",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-02",
+    "text": "My goal is data science from cleaning to visualisation",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-03",
+    "text": "I enjoy probability regression and statistical inference",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-04",
+    "text": "I want to work as a data scientist using mathematical models",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-05",
+    "text": "My interests are data pipelines and quantitative analysis",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-06",
+    "text": "I want to study optimisation and statistical learning",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-07",
+    "text": "I like finding patterns in large datasets and testing hypotheses",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-08",
+    "text": "I want to learn data preparation and exploratory analysis",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-09",
+    "text": "I enjoy mathematics statistics and numerical computation",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-10",
+    "text": "My career goal is forecasting from structured datasets",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-11",
+    "text": "I want rigorous training in regression and data modelling",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-data-12",
+    "text": "I hope to build scalable data processing pipelines",
+    "label": "data",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-01",
+    "text": "I want to design usable information systems for organisations",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-02",
+    "text": "I enjoy database architecture and user experience design",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-03",
+    "text": "I want to manage enterprise information services",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-04",
+    "text": "My goal is human computer interaction and systems design",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-05",
+    "text": "I want to improve usability of software interfaces",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-06",
+    "text": "I am interested in information systems analysis and requirements",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-07",
+    "text": "I want to design databases and manage software infrastructure",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-08",
+    "text": "I hope to become an information systems architect",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-09",
+    "text": "I want to organise information and improve user interfaces",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-10",
+    "text": "I enjoy user research and interaction design for applications",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-11",
+    "text": "My goal is maintaining reliable organisational information systems",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-systems-12",
+    "text": "I want technical and managerial skills in information services",
+    "label": "systems",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-01",
+    "text": "I have a humanities degree and want to switch into computing",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-02",
+    "text": "I am a beginner seeking computer science foundations",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-03",
+    "text": "I studied history and want to become a software developer",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-04",
+    "text": "I want a conversion programme for non computing graduates",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-05",
+    "text": "I am changing careers from arts to programming",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-06",
+    "text": "I need foundational computing training without a technical degree",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-07",
+    "text": "I studied literature and want to enter the IT industry",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-08",
+    "text": "I want to learn programming from scratch as a career changer",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-09",
+    "text": "My economics degree lacked computing and I want a conversion course",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-10",
+    "text": "I need basic algorithms and software development foundations",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-11",
+    "text": "I am a non technical graduate transitioning to a computing career",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-conversion-12",
+    "text": "I studied sociology and now want foundational IT skills",
+    "label": "conversion",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-01",
+    "text": "I want to lead digital transformation in a business",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-02",
+    "text": "I want to connect technology with business strategy",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-03",
+    "text": "My goal is managing analytics teams and business decisions",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-04",
+    "text": "I want to become a technology consultant in industry",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-05",
+    "text": "I am interested in business value from artificial intelligence",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-06",
+    "text": "I want to manage digital products and technology projects",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-07",
+    "text": "I work in management and want to drive enterprise innovation",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-08",
+    "text": "I want analytics for commercial decisions and strategy",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-09",
+    "text": "I want to lead technology adoption across a company",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-10",
+    "text": "I am interested in digital strategy and business leadership",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-11",
+    "text": "My goal is business transformation using data and technology",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-business-12",
+    "text": "I want to bridge managers and technical teams",
+    "label": "business",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-01",
+    "text": "I am a teacher who wants to use AI in classroom learning",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-02",
+    "text": "I want to design educational experiences using learning sciences",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-03",
+    "text": "My goal is learning analytics for school students",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-04",
+    "text": "I enjoy pedagogy curriculum design and education technology",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-05",
+    "text": "I want to study how children learn with digital tools",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-06",
+    "text": "I am interested in classroom assessment and intelligent tutoring",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-07",
+    "text": "I want to improve teaching with educational research",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-08",
+    "text": "I am a learning designer building interactive lessons",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-09",
+    "text": "I want to use AI responsibly in schools and teacher training",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-10",
+    "text": "My goal is technology supported pedagogy and student learning",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-11",
+    "text": "I want to design educational games and evaluate learning",
+    "label": "education",
+    "synthetic": true
+  },
+  {
+    "id": "train-education-12",
+    "text": "I am interested in cognitive tools for classroom practice",
+    "label": "education",
+    "synthetic": true
+  }
+]
