@@ -50,8 +50,7 @@ node --test test.mjs
 - `submission/01_Business_and_Technical_Tradeoff_Analysis.pdf` - final analysis
 - `submission/02_Demonstration_Script.md` - narration script
 - `submission/03_Requirements_Alignment.md` - requirement-to-evidence checklist
-- `submission/04_DS_Compass_Demo_Silent.webm` - silent screen recording
-- `submission/04_Voiceover_Cues.md` - short voiceover matched to the recording
+- `submission/04_DS_Compass_Demo_Silent.webm` - complete 69-second silent screen recording; narration is timed in the demonstration script
 
 The evaluation covers interest classification only: 37 frozen synthetic cases, 86.5% exact-label accuracy, 18.9% majority-class baseline, and 8.1% abstention. These figures do not measure admission outcomes, programme quality, or applicant eligibility.
 
