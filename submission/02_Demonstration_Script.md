@@ -1,27 +1,21 @@
-# DS Compass Demonstration Script
+# DS Compass demonstration narration
 
-## Opening
+## 0:00-0:08 - Purpose and boundary
 
-Hello, I am Niu Duoer. This is my PE6201 individual project, Personalised AI Assisted Masters Programme Selection. DS Compass supports an international applicant who is comparing selected master's programmes in Singapore and the United Kingdom. It is an initial research tool, not an admissions predictor.
+Hello, I am Niu Duoer. This is DS Compass, my PE6201 individual project. It helps international applicants discover selected master's programmes in Singapore and the United Kingdom. It is an initial research tool, not an admission predictor or a university-ranking system.
 
-## Problem and scope
+## 0:08-0:25 - Profile and input design
 
-The user normally reads many university pages and must connect a broad goal such as data science, AI, systems, conversion computing, business analytics or learning technology to programme names and requirements. My system brings a small, source-linked catalogue into one workflow. I deliberately exclude application submission, university ranking, GPA conversion, visa advice and admission likelihood.
+I enter an undergraduate institution, an optional background category, major, GPA, destination, and a primary study direction. The school search accepts any institution. The optional 985, 211, or Double First Class field is only context: it does not affect retrieval or generate an admission probability. I then enter IELTS overall and four component scores. TOEFL can also be recorded without an unsupported conversion to IELTS.
 
-## Demonstration
+## 0:25-0:42 - Working recommendation and evidence
 
-I enter an undergraduate institution and degree for user context. The school search includes common Chinese universities, but users can also type any institution. The optional 985, 211 or Double First Class background field is recorded only for context: it never changes the shortlist or produces an admission prediction. I select a clear study direction, Artificial Intelligence, and select Singapore and the United Kingdom. I can enter IELTS overall and four component scores, or record a TOEFL iBT score. The system does not ask for an exam date; it asks the user to confirm validity for the next autumn intake on the official programme page.
+With Artificial Intelligence selected, the system retrieves source-linked AI programme cards. Each card shows its university, summary, region, English-evidence status, and the official programme-page link. The English result is not an eligibility decision. It only reports the recorded rule, and asks the applicant to verify current requirements and test validity directly with the university.
 
-After I submit, the server calls a rented language model to classify one fixed primary-interest label. The output cannot invent a programme requirement because the programme cards come from my local catalogue. The system returns the matching AI cards and shows a separate English-evidence status. Each card has the original university page link so the applicant can check current information.
+## 0:42-0:56 - AI, data, evaluation and limitations
 
-I now demonstrate a limitation. If I write an unclear, equally mixed or out-of-catalogue goal, the system should abstain and ask for one main direction. If the language model is unavailable, the page explicitly reports its local English baseline rather than silently behaving as though the model ran.
+The method panel shows the system boundary. There are 15 concise records based on official university pages. Selected directions use deterministic catalogue retrieval. Only Other or unsure sends short keywords to a server-side model, which returns one fixed direction or abstains. The frozen synthetic evaluation has 37 cases, 86.5 percent exact-label accuracy, an 18.9 percent majority baseline, and 8.1 percent abstention. These are engineering checks, not admissions outcomes or independent human validation.
 
-## Evaluation and trade off
+## 0:56-1:09 - Failure handling and close
 
-I evaluated only interest classification, not admissions. A different model generated and labelled a frozen synthetic test set before the deployed Gemini model was evaluated. There were 37 valid cases. Gemini achieved 86.5 percent exact-label accuracy, compared with an 18.9 percent majority-class baseline. This is a small synthetic engineering check and not independent human validation.
-
-The project uses official programme pages, but information can change. The page prompts a recheck after 90 days. Academic eligibility, degree equivalence, English exemptions and admissions decisions remain manual review. I did not use or publish historical applicant cases because their labels, provenance and permission are uncertain.
-
-## Closing
-
-The acceptance test is that a user selects a destination, enters a clear goal and receives either a source-linked same-domain shortlist with a separate English-evidence status, or a clear abstention. The live site completes this path. My next improvement would be independently human-labelled evaluation data and a second reviewer for source encoding.
+Finally, I enter marine biology and ocean ecology, which is outside this catalogue. The system does not invent a match. It asks the user to clarify one primary study goal. This limitation is deliberate: stale university information, mixed goals, and incomplete coverage require manual review or abstention. The live system and its source code are publicly available for assessment.
