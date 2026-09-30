@@ -24,6 +24,7 @@ export function validate(p){
 export function englishCheck(p,c,asOf=new Date().toISOString().slice(0,10)){
  const out=(status,message)=>({status,message});
  if((new Date(asOf)-new Date(c.verified_on))/86400000>90)return out('review','Source snapshot is over 90 days old; recheck the university page.');
+ if(c.ielts_min==null)return out('review','This catalogue entry has no encoded IELTS threshold; check the official programme page.');
  if(p.ielts==null)return out('review',p.test_type==='toefl'?'TOEFL is recorded, but this small catalogue does not encode a comparable TOEFL rule for every programme; check the official page.':'IELTS not provided; other tests and exemptions need university confirmation.');
  if(p.ielts<c.ielts_min)return out('gap',`IELTS overall ${p.ielts} < ${c.ielts_min}`);
  if(c.band_min!=null&&(!p.bands||p.bands.some(x=>x==null)))return out('review','Four IELTS component scores are needed for this recorded rule.');
