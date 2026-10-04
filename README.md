@@ -27,7 +27,8 @@ The secret key is configured only in the hosted runtime and is never stored in t
 | `engine.mjs` | Validation, classification, retrieval, and English-evidence rules |
 | `data/` | 15 official-source programme records, synthetic intent examples, and frozen evaluation metrics |
 | `test.mjs` | Automated core-logic tests |
-| `submission/` | Final report, demonstration script, requirement alignment, silent demo, and narration cues |
+| `docs/` | Product architecture, data explainer, evaluation explainer, and code guide |
+| `submission/` | Final report, 5-minute demonstration script, requirement alignment, and a non-final silent screen reference |
 | `.openai/hosting.json` | Deployment project reference; contains no secret |
 
 ## Run and test locally
@@ -50,7 +51,14 @@ node --test test.mjs
 - `submission/01_Business_and_Technical_Tradeoff_Analysis.pdf` - final analysis
 - `submission/02_Demonstration_Script.md` - narration script
 - `submission/03_Requirements_Alignment.md` - requirement-to-evidence checklist
-- `submission/04_DS_Compass_Demo_Silent.webm` - complete 69-second silent screen recording; narration is timed in the demonstration script
+- `submission/04_DS_Compass_Demo_Silent.webm` - screen-only reference recording; it is not the final deliverable because the final recording must show the presenter and include spoken audio
+
+## Review documents
+
+- `docs/PRODUCT_DOCUMENTATION.md` - persona, inputs, outputs, architecture diagram, and metric summary
+- `docs/DATA_EXPLAINER.md` - catalogue provenance, schema, quality controls, and data limitations
+- `docs/EVALUATION_EXPLAINER.md` - evaluation question, reproducible checks, results, and critique
+- `docs/CODE_GUIDE.md` - module map, execution instructions, and suggested code-review order
 
 The evaluation covers interest classification only: 37 frozen synthetic cases, 86.5% exact-label accuracy, 18.9% majority-class baseline, and 8.1% abstention. These figures do not measure admission outcomes, programme quality, or applicant eligibility.
 
