@@ -24,11 +24,11 @@ Choosing Artificial Intelligence directly filters the catalogue. I can also choo
 
 ## 6. What the evaluation measured
 
-The method panel explains the small catalogue and the classification check. On 37 synthetic study-interest examples, Gemini matched 32 reference labels, or 86.5 percent. An always-abstain baseline matched seven. These examples were model-assisted and were not independently labelled by people, so this is an early technical check rather than proof that recommendations help real applicants. The detailed failure counts are in GitHub.
+The method panel explains the small catalogue and the classification check. On 37 synthetic study-interest examples, the hosted classifier matched 32 reference labels, or 86.5 percent. An always-abstain baseline matched seven. These examples were model-assisted and were not independently labelled by people, so this is an early technical check rather than proof that recommendations help real applicants. The detailed failure counts are in GitHub.
 
 ## 7. Show a real failure
 
-Here is the evaluation file in the repository. Only three of seven out-of-scope examples were correctly rejected. In T38, a request about AI tools for medication adherence was labelled AI even though healthcare was outside this catalogue. Legal-document review was also wrongly labelled AI. The table shows the expected and recorded output for each error. This is why the overall 86.5 percent accuracy cannot be read as reliable boundary detection.
+Here is the evaluation file in the repository. One example closely related to this tool is T11: a question about improving a company's sales pipeline with data. The expected direction was business, but the model returned data. The table shows the reference label and recorded output, so this is a checkable error rather than a hypothetical one. The same test set also found that only three of seven requests outside the catalogue were rejected. That is why I report the errors alongside the overall accuracy.
 
 ## 8. Limits and next step
 
