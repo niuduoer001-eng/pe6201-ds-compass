@@ -1,7 +1,7 @@
 // Regression checks for input validation and result boundaries.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validate, englishCheck, recommend, nbPredict } from './engine.mjs';
+import { validate, academicEvidence, englishCheck, recommend, nbPredict } from './engine.mjs';
 import catalogue from './data/programmes.json' with { type: 'json' };
 import trainingRows from './data/train_intents.json' with { type: 'json' };
 
@@ -38,7 +38,18 @@ test('English status is not presented as full eligibility', () => {
   };
   const result = recommend(profile, 'ai', catalogue);
 
-  assert.match(result.message, /academic eligibility/);
+  assert.match(result.message, /admission still needs university review/);
+});
+
+test('academic evidence gives a reason without an admission prediction', () => {
+  const programme = catalogue.find((row) => row.id === 'edinburgh-ai');
+  const result = academicEvidence(
+    { degree: 'Computer Science / Software Engineering' },
+    programme,
+  );
+
+  assert.equal(result.status, 'evidence');
+  assert.match(result.message, /university review/);
 });
 
 test('local baseline abstains on unknown Chinese text', () => {
