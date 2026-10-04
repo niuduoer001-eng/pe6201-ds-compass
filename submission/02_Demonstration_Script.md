@@ -1,50 +1,39 @@
-# DS Compass demo script
+# DS Compass demo narration
 
-**Target length:** about five minutes. Record your face and the screen together. The time marks are prompts, not lines to read aloud.
+Use with `04_DS_Compass_Demo_Screen_Master_Final.webm` (about 4 minutes 6 seconds). The eight headings match the captions at the bottom of that video. Start each paragraph when its chapter appears; pause briefly during the website transitions. Speak naturally rather than trying to read every word at a fixed speed.
 
-## 0:00-0:40 | What I built
+## 1. The problem and the tool
 
-Hi, I'm Niu Duoer. This is DS Compass, my PE6201 individual project. I built it for an international student who has a study area in mind but needs help finding which master's programme pages to compare in Singapore and the UK.
+Hi, I'm Niu Duoer. This is DS Compass, my PE6201 project. It helps a prospective master's student find programme pages to compare in Singapore and the UK. The output is a small shortlist with official links. It does not predict admission.
 
-The current alternative is to search each university site and compare the results by hand. That remains the source of truth, but it takes repeated searching. DS Compass makes a first shortlist and puts the official link beside each result. It does not predict admission or decide whether a student meets every academic requirement.
+## 2. Enter a profile
 
-## 0:40-1:25 | Enter a profile
+I'll try a sample profile. I enter Nanjing University, choose the optional 985 category, select Computer Science, and enter a 3.5 out of 4 GPA. The school field accepts names outside the suggestion list. School background and GPA give context, but they do not secretly score the applicant or change the results. I choose both countries and Artificial Intelligence as the study direction. For IELTS, I enter the overall score and the four component scores separately. These are the inputs a user can reasonably check against published programme rules.
 
-I'll enter Nanjing University and choose the optional 985 category. I can also type a school that is not in the suggestions. That field and the GPA are for context only. They do not change which programmes appear. I made that choice because I do not have reliable admissions data to turn school background into a score.
+## 3. Read the result and its source
 
-I'll select Computer Science, Singapore and the UK, then choose Artificial Intelligence. I can enter IELTS overall and the four component scores, or switch to TOEFL. TOEFL is recorded as TOEFL; the app does not convert it to an IELTS result. I removed the test-date and planned-course-start questions because they made the form longer without improving this initial shortlist.
+The shortlist now shows matching programmes from the local catalogue. The first card is NTU's MSc Artificial Intelligence. It displays a short description, an English-evidence message, and the official programme link. In this example, the recorded IELTS rule is met. That message is narrower than an admission decision; degree fit and other requirements still need review. I open NTU's page to check the current details at the source. This catalogue has only fifteen records, so it cannot represent every suitable course.
 
-## 1:25-2:05 | Follow a result back to its source
+## 4. TOEFL and missing rules
 
-I'll generate the shortlist. These cards match the AI direction and selected countries. Each one shows the programme, its university, a short summary and an English-evidence message. This example says the recorded IELTS rule is met. That is only a check against the rule in this catalogue. It is not a decision about admission, degree equivalence or exemptions.
+Now I switch the same profile to a TOEFL iBT total of 99. The result changes to “English: review.” The catalogue does not encode a comparable TOEFL rule for every programme, so the app asks me to check the university page. It does not convert TOEFL into an invented IELTS equivalent. That uncertainty is useful information for the applicant.
 
-I'll open one official programme page. The applicant should check the current entry details there before making a decision. The 15 programme records are a deliberately small directory, and some directions have only a few results.
+## 5. Where the model is used
 
-## 2:05-2:55 | Explain where the AI is used
+Choosing Artificial Intelligence directly filters the catalogue. I can also choose “Other or unsure” and type short keywords. Here I enter “machine learning and natural language processing.” The hosted classifier returns one of the fixed study directions, then the app retrieves matching records. The model does not write programme facts. If the model service fails, a local classifier is used and the app reports the fallback.
 
-For the direction I selected, the system uses a direct filter over the local programme file. The model is used only if I choose Other or unsure and type short keywords. The hosted worker sends that text to Gemini, which returns one of six direction labels or abstains. The result card still comes from the local file. The model cannot write a course description or invent an English threshold.
+## 6. What the evaluation measured
 
-The browser does not hold the API key. If the model call is unavailable, the worker uses a small local Naive Bayes fallback and reports that change. That fallback is based on English word tokens, so it is weak for Chinese. It is there for a basic fallback path, not as an equivalent Chinese classifier.
+The method panel explains the small catalogue and the classification check. On 37 synthetic study-interest examples, Gemini matched 32 reference labels, or 86.5 percent. An always-abstain baseline matched seven. These examples were model-assisted and were not independently labelled by people, so this is an early technical check rather than proof that recommendations help real applicants. The detailed failure counts are in GitHub.
 
-## 2:55-3:40 | Read the metric honestly
+## 7. Show a real failure
 
-The method panel shows the saved classification result: 32 of 37 labels were correct, or 86.5 percent. The majority-class baseline was 18.9 percent. This is a small synthetic check. GPT-4.1 mini helped generate the test wording and reference labels; no independent human panel labelled these examples.
+Here is the evaluation file in the repository. Only three of seven out-of-scope examples were correctly rejected. In T38, a request about AI tools for medication adherence was labelled AI even though healthcare was outside this catalogue. Legal-document review was also wrongly labelled AI. The table shows the expected and recorded output for each error. This is why the overall 86.5 percent accuracy cannot be read as reliable boundary detection.
 
-The overall number also hides a problem. Only three of seven out-of-scope examples were withheld. Four got an in-scope direction. So this evaluation does not show that the classifier reliably detects the edge of the catalogue.
+## 8. Limits and next step
 
-## 3:40-4:30 | Show one actual failure
+My next step would be human-labelled applicant queries and a second review of the programme rules. For now, DS Compass helps users reach official pages faster, while each suggestion still needs checking. Thank you.
 
-I'll open the evaluation explainer in the repository. Case T38 asks about using AI tools to improve medication adherence. Gemini returned `ai`, even though the reference label was `abstain`: healthcare was outside this programme catalogue. Another case about legal document review was also labelled `ai`. Those are recorded outputs, not hypothetical risks.
+## Final recording requirement
 
-The model handles many straightforward descriptions, but the results show it sometimes treats a technology mentioned in a request as the study field itself. A user should check the catalogue and links rather than assume a label is correct.
-
-## 4:30-5:00 | What I would do next
-
-I would collect a small set of consented applicant queries, label them with people, and keep a separate test set untouched while improving the classifier. I would also ask a second reviewer to check the programme and English-rule entries. The project is useful as a source-linked starting point, but the current evaluation and catalogue are too limited for unsupervised decisions. Thank you.
-
-## Before recording
-
-- Keep your face visible beside the browser window for the full recording.
-- Start with the live app; enter the example profile and show the result cards.
-- Open the Method panel, then switch to `docs/EVALUATION_EXPLAINER.md` on GitHub for cases T38 and T35.
-- Keep the final recording between 2 and 8 minutes; the target is about 5 minutes.
+The supplied video is a silent screen master. The course requires your face and spoken explanation to appear with the screen in the submitted video. Record your own camera and voice, combine them with the master, and check that the final cut remains between three and five minutes. Do not submit the silent master as the final demo.
