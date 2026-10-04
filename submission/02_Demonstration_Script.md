@@ -1,6 +1,6 @@
 # DS Compass demo narration
 
-Use with `04_DS_Compass_Demo_Screen_Master_Final.webm` (about 4 minutes 6 seconds). The eight headings match the captions at the bottom of that video. Start each paragraph when its chapter appears; pause briefly during the website transitions. Speak naturally rather than trying to read every word at a fixed speed.
+This is the narration guide for `04_DS_Compass_Final_Demo.mp4` (4 minutes 56 seconds). The recording uses the same eight-part flow. Speak naturally rather than trying to read every word at a fixed speed.
 
 ## 1. The problem and the tool
 
@@ -33,7 +33,3 @@ Here is the evaluation file in the repository. One example closely related to th
 ## 8. Limits and next step
 
 My next step would be human-labelled applicant queries and a second review of the programme rules. For now, DS Compass helps users reach official pages faster, while each suggestion still needs checking. Thank you.
-
-## Final recording requirement
-
-The supplied video is a silent screen master. The course requires your face and spoken explanation to appear with the screen in the submitted video. Record your own camera and voice, combine them with the master, and check that the final cut remains between three and five minutes. Do not submit the silent master as the final demo.
