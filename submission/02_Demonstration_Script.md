@@ -12,7 +12,7 @@ I'll try a sample profile. I enter Nanjing University, choose the optional 985 c
 
 ## 3. Read the result and its source
 
-The shortlist now shows matching programmes from the local catalogue. The first card is NTU's MSc Artificial Intelligence. It displays a short description, an English-evidence message, and the official programme link. In this example, the recorded IELTS rule is met. That message is narrower than an admission decision; degree fit and other requirements still need review. I open NTU's page to check the current details at the source. This catalogue has only fifteen records, so it cannot represent every suitable course.
+The shortlist now shows matching programmes from the local catalogue. The first card is NTU's MSc Artificial Intelligence. It displays a short description, the recorded academic requirement, an academic-preparation evidence message, an English-evidence message, and the official programme link. Here the selected Computer Science major is broadly related to the published requirement, and the recorded IELTS rule is met. These are evidence checks, not an admission decision. I open NTU's page to check the current details at the source. This catalogue has only fifteen records, so it cannot represent every suitable course.
 
 ## 4. TOEFL and missing rules
 
@@ -20,7 +20,7 @@ Now I switch the same profile to a TOEFL iBT total of 99. The result changes to 
 
 ## 5. Where the model is used
 
-My proposal envisaged matching official pages with historical application cases. I could not verify or reuse those case records, so I narrowed this prototype. Choosing Artificial Intelligence filters the catalogue directly. Under “Other or unsure,” I enter “machine learning and natural language processing.” The hosted classifier selects a fixed direction, then the app retrieves catalogue records. The model does not write programme facts. If its service fails, the app reports a local classifier fallback.
+My proposal envisaged matching official pages with historical application cases. I could not verify or reuse those country-specific case records, so I narrowed the output to official-source evidence rather than a Reach, Match or Safer prediction. Choosing Artificial Intelligence retrieves the catalogue directly. Under “Other or unsure,” I enter “machine learning and natural language processing.” The hosted classifier selects a fixed direction, then the app retrieves catalogue records. The model does not write programme facts. If its service fails, the app reports a local classifier fallback.
 
 ## 6. What the evaluation measured
 
