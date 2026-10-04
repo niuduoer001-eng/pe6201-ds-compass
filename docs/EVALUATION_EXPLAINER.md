@@ -6,6 +6,12 @@ I measured one thing: whether Gemini classified a short study-interest descripti
 
 The test inputs and expected labels are in `evals/intent_cases.json`. The model's output for each case is in `evals/model_outputs.json`. The set contains 37 synthetic prompts. GPT-4.1 mini helped create the wording and reference labels before the Gemini run. The cases were held apart from the local training file, but they were not labelled by independent human reviewers.
 
+## Profile-to-requirement evidence check
+
+The final prototype also compares the selected undergraduate major with the programme's recorded academic requirement. This is a deterministic evidence label, not a predicted admission tier. `evidence` means the selected major is broadly related to the requirement; `review` means the requirement includes a condition that the simple profile does not establish, such as mathematics, transcript content, teaching experience, degree equivalence or overlap with a conversion course.
+
+`evals/profile_evidence_cases.json` contains eight hand-specified checks across AI, data, business, education and conversion programmes. `node evals/replay_profile_evidence.mjs` replays them without an API call. They test whether the implemented rule matches the documented design; they do not validate university admissions decisions. I did not use the supplied US historical applicant cases for this check, because their country and programme context do not transfer to Singapore and UK admissions.
+
 ## Results
 
 I did not record a minimum accuracy or OOD-recall threshold before running the model. The majority baseline is a reference point, not a pass mark.
