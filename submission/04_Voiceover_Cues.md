@@ -1,0 +1,3 @@
+# Voiceover cues for the silent demo
+
+This 26-second recording shows the working end-to-end path. I enter an undergraduate institution, an optional background category, a major, destination, and Artificial Intelligence as the study direction. The background category is only recorded for context; it does not predict admission or alter the shortlist. I then enter IELTS overall and component scores. The system returns source-linked programme cards for Singapore and the United Kingdom, with a separate English-evidence status. Finally, I enter an out-of-catalogue marine biology request. The system withholds a recommendation and asks the user to clarify, rather than inventing a programme match.

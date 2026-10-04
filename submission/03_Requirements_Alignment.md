@@ -1,22 +1,19 @@
-# PE6201 final-submission alignment — working status
+# Submission map
 
-This page records the final scope adopted from the approved proposal: an evidence-led master's programme discovery prototype for international applicants, using official admissions sources and a rented language model. The scope is **Singapore and the United Kingdom**, not an admission-prediction system.
+The proposal called for an AI assisted master's programme tool using official programme information. The submitted version keeps that purpose, covers Singapore and the United Kingdom, and limits the model to classifying short study-interest text. The project does not claim to predict admission.
 
-| Official requirement | Current implementation evidence | Submission status |
-|---|---|---|
-| One scoped problem, named primary user, existing-tool gap | Final report: international applicant comparing programmes; DS Compass turns a stated direction into an official-source shortlist and exposes English-evidence uncertainty. | Complete |
-| Working end-to-end AI system | Live DS Compass: profile → server-side LLM intent label → local official programme retrieval → IELTS evidence rule → linked result cards. | Complete |
-| Non-AI baseline | Laplace-smoothed Naive Bayes English baseline runs if the model service is unavailable; its use is shown in the result. | Complete |
-| Data, provenance and licensing | 15 hand-curated paraphrases of university pages, each with source URL and 30 Sep 2026 snapshot date. No personal historical cases are published or used. | Complete |
-| LLM and technical/cost trade-off | OpenRouter-hosted Gemini 2.5 Flash Lite classifies Other or unsure short keywords into one fixed label. GPT-4.1 mini generated the held-out synthetic test set before Gemini was run. Key stays server-side. | Complete |
-| Metric, target and baseline | Held-out set: 37 valid synthetic cases; Gemini accuracy 86.5%; majority-class baseline 18.9%; abstention 8.1%; 0 abstentions that would otherwise be errors. This is intent classification only. | Complete; documented in report and `docs/EVALUATION_EXPLAINER.md` |
-| Evaluation safeguards | Labels were generated before evaluation by a different model; no test cases were added after the generator returned only 37 valid entries. Prompt-injection and unclear requests are designed to abstain. | Complete; critique and next evaluation are documented |
-| Failure, risk and mitigation | Source freshness prompt after 90 days; fixed output schema; same-domain retrieval; server-only key; no admission likelihood; manual-review states. | Complete; demonstrated in the final script |
-| Structured final report | 1,101-word English report discusses outcomes, evaluation critique, tuning trade-offs, difficulties, rough edges and future path. | Complete |
-| Working code in GitHub | Source code and supporting materials are published at https://github.com/niuduoer001-eng/pe6201-ds-compass. The public live application is linked in its README. | Complete |
-| Recorded presentation/demo | A timed 5-minute script specifies the working path, AI, evidence, metrics, critique, safe failure and future path. | Outstanding — student must record face, screen and spoken audio together |
-| Product documentation | `docs/PRODUCT_DOCUMENTATION.md` provides persona, inputs, outputs, architecture diagram and metric summary. | Complete |
-| Data and eval explainers | `docs/DATA_EXPLAINER.md` and `docs/EVALUATION_EXPLAINER.md` explain provenance, schema, checks, metrics and limitations. | Complete |
-| Code documentation | README and `docs/CODE_GUIDE.md` provide module map, review order and run instructions; source files have module headers. | Complete |
+| Course item | Where to review it |
+| --- | --- |
+| Final outcome, reasoning, trade-offs, metric critique and future work | `submission/01_Business_and_Technical_Tradeoff_Analysis.pdf` |
+| Persona, inputs, outputs and architecture diagram | `docs/PRODUCT_DOCUMENTATION.md` |
+| Programme sources and field definitions | `docs/DATA_EXPLAINER.md` and `data/programmes.json` |
+| Evaluation cases, model outputs, summary and frozen checksums | `evals/` |
+| Evaluation explanation and failure analysis | `docs/EVALUATION_EXPLAINER.md` |
+| Code roles and local run commands | `docs/CODE_GUIDE.md` and `README.md` |
+| Current web application | https://ds-compass-sg-uk-niu.duoer001.chatgpt.site |
+| Five-minute recording script | `submission/02_Demonstration_Script.md` |
+| AI tool use | `submission/00_AI_Assistance_Statement.md` |
 
-The original proposal remains substantively aligned: its stated architecture is a foundation model plus official-source retrieval, its inputs include test results, and it explicitly rejects guarantees. The changes from the initial proof-of-concept are (1) a justified Singapore+UK directory expansion, and (2) a rented LLM now used for the narrowly defined intent-classification stage that the proposal anticipated.
+The evaluation has a clear limitation: the model only abstained on three of seven out-of-scope cases. The four misses are recorded in `evals/model_outputs.json`; the report discusses them rather than treating the overall accuracy as a reliability claim.
+
+The final video is still to be recorded. The course asks for the presenter and screen to appear together with spoken narration. The script is a guide; the student should deliver it naturally, show the real app and pause on the evaluation evidence.
