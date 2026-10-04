@@ -1,0 +1,59 @@
+{
+  "evaluated_on": "2026-09-29",
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0,
+  "cases": 37,
+  "correct": 32,
+  "accuracy_pct": 86.5,
+  "majority_class": "abstain",
+  "majority_baseline_pct": 18.9,
+  "predicted_abstentions": 3,
+  "abstention_rate_pct": 8.1,
+  "ood_cases": 7,
+  "ood_abstained": 3,
+  "ood_abstention_recall_pct": 42.9,
+  "incorrect_ood_acceptances": 4,
+  "errors": [
+    {
+      "id": "T38",
+      "expected": "abstain",
+      "predicted": "ai",
+      "correct": false
+    },
+    {
+      "id": "T35",
+      "expected": "abstain",
+      "predicted": "ai",
+      "correct": false
+    },
+    {
+      "id": "T41",
+      "expected": "abstain",
+      "predicted": "ai",
+      "correct": false
+    },
+    {
+      "id": "T11",
+      "expected": "business",
+      "predicted": "data",
+      "correct": false
+    },
+    {
+      "id": "T34",
+      "expected": "abstain",
+      "predicted": "business",
+      "correct": false
+    }
+  ],
+  "label_counts": {
+    "ai": 5,
+    "data": 5,
+    "systems": 6,
+    "conversion": 4,
+    "business": 6,
+    "education": 4,
+    "abstain": 7
+  },
+  "generation_note": "42 examples requested; 37 valid synthetic examples returned and frozen before the Gemini evaluation. GPT-4.1 mini assisted with test text and reference labels. These are not independent human labels.",
+  "limitation": "Small synthetic set; 4 of 7 expected abstentions were assigned an in-scope label. Do not treat overall accuracy as evidence of robust out-of-domain detection."
+}

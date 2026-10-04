@@ -1,0 +1,224 @@
+[
+  {
+    "id": "T27",
+    "expected": "business",
+    "predicted": "business",
+    "correct": true
+  },
+  {
+    "id": "T19",
+    "expected": "systems",
+    "predicted": "systems",
+    "correct": true
+  },
+  {
+    "id": "T38",
+    "expected": "abstain",
+    "predicted": "ai",
+    "correct": false
+  },
+  {
+    "id": "T05",
+    "expected": "ai",
+    "predicted": "ai",
+    "correct": true
+  },
+  {
+    "id": "T32",
+    "expected": "abstain",
+    "predicted": "abstain",
+    "correct": true
+  },
+  {
+    "id": "T12",
+    "expected": "business",
+    "predicted": "business",
+    "correct": true
+  },
+  {
+    "id": "T35",
+    "expected": "abstain",
+    "predicted": "ai",
+    "correct": false
+  },
+  {
+    "id": "T09",
+    "expected": "ai",
+    "predicted": "ai",
+    "correct": true
+  },
+  {
+    "id": "T03",
+    "expected": "data",
+    "predicted": "data",
+    "correct": true
+  },
+  {
+    "id": "T29",
+    "expected": "education",
+    "predicted": "education",
+    "correct": true
+  },
+  {
+    "id": "T41",
+    "expected": "abstain",
+    "predicted": "ai",
+    "correct": false
+  },
+  {
+    "id": "T08",
+    "expected": "conversion",
+    "predicted": "conversion",
+    "correct": true
+  },
+  {
+    "id": "T22",
+    "expected": "systems",
+    "predicted": "systems",
+    "correct": true
+  },
+  {
+    "id": "T36",
+    "expected": "abstain",
+    "predicted": "abstain",
+    "correct": true
+  },
+  {
+    "id": "T01",
+    "expected": "ai",
+    "predicted": "ai",
+    "correct": true
+  },
+  {
+    "id": "T30",
+    "expected": "data",
+    "predicted": "data",
+    "correct": true
+  },
+  {
+    "id": "T14",
+    "expected": "business",
+    "predicted": "business",
+    "correct": true
+  },
+  {
+    "id": "T06",
+    "expected": "ai",
+    "predicted": "ai",
+    "correct": true
+  },
+  {
+    "id": "T33",
+    "expected": "abstain",
+    "predicted": "abstain",
+    "correct": true
+  },
+  {
+    "id": "T04",
+    "expected": "conversion",
+    "predicted": "conversion",
+    "correct": true
+  },
+  {
+    "id": "T23",
+    "expected": "systems",
+    "predicted": "systems",
+    "correct": true
+  },
+  {
+    "id": "T16",
+    "expected": "data",
+    "predicted": "data",
+    "correct": true
+  },
+  {
+    "id": "T20",
+    "expected": "systems",
+    "predicted": "systems",
+    "correct": true
+  },
+  {
+    "id": "T26",
+    "expected": "education",
+    "predicted": "education",
+    "correct": true
+  },
+  {
+    "id": "T10",
+    "expected": "business",
+    "predicted": "business",
+    "correct": true
+  },
+  {
+    "id": "T13",
+    "expected": "ai",
+    "predicted": "ai",
+    "correct": true
+  },
+  {
+    "id": "T21",
+    "expected": "systems",
+    "predicted": "systems",
+    "correct": true
+  },
+  {
+    "id": "T07",
+    "expected": "data",
+    "predicted": "data",
+    "correct": true
+  },
+  {
+    "id": "T31",
+    "expected": "education",
+    "predicted": "education",
+    "correct": true
+  },
+  {
+    "id": "T18",
+    "expected": "conversion",
+    "predicted": "conversion",
+    "correct": true
+  },
+  {
+    "id": "T11",
+    "expected": "business",
+    "predicted": "data",
+    "correct": false
+  },
+  {
+    "id": "T24",
+    "expected": "education",
+    "predicted": "education",
+    "correct": true
+  },
+  {
+    "id": "T15",
+    "expected": "data",
+    "predicted": "data",
+    "correct": true
+  },
+  {
+    "id": "T34",
+    "expected": "abstain",
+    "predicted": "business",
+    "correct": false
+  },
+  {
+    "id": "T28",
+    "expected": "systems",
+    "predicted": "systems",
+    "correct": true
+  },
+  {
+    "id": "T17",
+    "expected": "conversion",
+    "predicted": "conversion",
+    "correct": true
+  },
+  {
+    "id": "T25",
+    "expected": "business",
+    "predicted": "business",
+    "correct": true
+  }
+]

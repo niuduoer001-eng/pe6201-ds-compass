@@ -1,0 +1,11 @@
+{
+  "frozen_on": "2026-09-29",
+  "files": {
+    "data/programmes.json": "a50f69bacb4688175c54cb101423dd367839a0c4c9328113dcfa924a7890c99c",
+    "data/train_intents.json": "1e22ce1a4025129b9e95acef145245a6f76349fb0738245823576de369ba6cb5",
+    "evals/intent_cases.json": "5c55dbbe630aaadb8620b3922531f92a1c5ab727cd843566f5be0cc3f8110bf5",
+    "evals/model_outputs.json": "72d52d2b3687a6bfd7ca66250790dfc78113338e93e3c9d13bf8b2e3242d259c",
+    "evals/summary.json": "919ff6153f7ce82434a58c4350bc546c81e11f1d29caf5ed2e22f3eab867f717"
+  },
+  "note": "Checksums identify the programme/training data and the synthetic evaluation inputs/outputs used for the reported run."
+}

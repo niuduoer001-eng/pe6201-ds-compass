@@ -1,52 +1,48 @@
-# DS Compass product documentation
+# Product notes
 
-## Persona and user problem
+## Who the app is for
 
-**Primary persona:** an international graduate exploring selected taught master's programmes in Singapore and the United Kingdom. They may understand their intended field but not the local programme names, prerequisites or English-language evidence rules.
+I designed DS Compass for an international applicant who has picked a broad subject area but is unsure which programme pages to compare. The first version focused on Singapore. The final prototype also includes the United Kingdom, following the project scope discussed in the proposal.
 
-**Job to be done:** turn one primary study direction into a small set of official-source programme pages to investigate further.
+The user's task is modest: choose a country and a study direction, then use a small shortlist to continue their own research. The app does not claim to choose a university for them.
 
-**Product boundary:** DS Compass supports research. It does not rank universities, predict admission, decide academic eligibility, convert GPA, submit applications, or give visa advice.
+## What goes in and what comes out
 
-## Inputs and outputs
+| Input | What the app does with it |
+| --- | --- |
+| Country and selected direction | Filters programme records by region and domain |
+| Short keywords under Other or unsure | Sends them to the hosted classifier, which returns a fixed label or abstains |
+| School, optional background category, major and GPA | Keeps them in the submitted profile; they do not affect retrieval |
+| IELTS overall and four component scores | Compares them with the encoded IELTS fields when those fields exist |
+| TOEFL iBT total | Records the score; no IELTS conversion is attempted |
 
-| Input | Use | Not used for |
-| --- | --- | --- |
-| Destination and study direction | Select same-region, same-domain records | University ranking or admission likelihood |
-| Short keywords for Other or unsure | Classify into a fixed direction or abstain | Programme-fact generation |
-| School, optional background, degree and GPA | Displayed as user context | Scoring or ordering a programme |
-| IELTS overall and components | Compare only to encoded IELTS rules | Full eligibility decision |
-| TOEFL iBT total | Record for the user | Conversion to an unsupported IELTS equivalent |
+Each result card shows a programme name, university, country, short description, English-evidence message and an official page link. `supported` means the recorded IELTS threshold is met. `gap` means a recorded score is below a threshold. `review` means the catalogue cannot make that comparison. None of these labels decides academic eligibility.
 
-Each output card gives a programme title, university, region, concise author paraphrase, English-evidence status and official source link. The status is **supported**, **gap**, or **review**. It is not an admission result.
-
-## Product architecture
+## Request path
 
 ```mermaid
 flowchart LR
-  U[Applicant browser] --> F[Profile and direction form]
-  F -->|fixed direction| R[Deterministic local retrieval]
-  F -->|Other or unsure keywords| W[Hosted worker]
-  W -->|bounded JSON label request| L[OpenRouter Gemini]
-  L --> W
-  W -->|fallback if unavailable| B[Naive Bayes English baseline]
-  W --> R
-  D[(programmes.json: 15 source-linked records)] --> R
-  R --> E[IELTS rule check or review]
-  E --> O[Programme cards, English status, official links]
+  A[Applicant form] -->|selected direction| C[Catalogue filter]
+  A -->|Other or unsure keywords| W[Hosted worker]
+  W --> G[Gemini fixed-label classification]
+  G -->|label or abstain| C
+  W -. if model call fails .-> N[Local Naive Bayes fallback]
+  N --> C
+  D[(15 records in programmes.json)] --> C
+  C --> E[IELTS rule check]
+  E --> O[Programme cards and official links]
 ```
 
-The browser never receives the OpenRouter key. `worker.mjs` validates requests, limits input size, constrains model output to fixed labels and serves the resulting response. The model does not receive the programme catalogue or applicant history.
+The worker is the only part that holds the model key. It validates the profile, caps the request body, limits model calls and checks that the classifier returned an allowed label. The model does not receive the programme catalogue or application histories. The final cards are looked up from local JSON data.
 
-## Metrics targeted and reached
+## Measures and current results
 
-| Metric | Target | Reached | Interpretation |
-| --- | --- | --- | --- |
-| Interest-label accuracy | Demonstrate improvement over a trivial majority baseline | 86.5% exact label vs 18.9% majority baseline | 37 frozen synthetic cases only |
-| Safe handling of unsuitable requests | Do not force an unsupported programme match | Abstention rate 8.1%; marine-biology example abstains | Not a measurement of all real user requests |
-| Evidence traceability | Every displayed programme has a direct official link | 15/15 catalogue records | Source freshness still requires rechecking |
-| English-rule communication | No automatic full-eligibility claim | supported, gap or review status on each result | Some cards deliberately remain review-only |
+I had not set a minimum accuracy target before running the model, so 86.5% is a result to interpret, not a pass against a pre-registered threshold. For context, always choosing the majority label (`abstain`) would match 7 of 37 cases (18.9%); Gemini matched 32 of 37 (86.5%).
 
-## Known limitations and next steps
+The main boundary measure was the share of out-of-scope examples withheld. There was no pre-set numeric target for this either. The model abstained on three of seven; it gave an in-scope label to the other four. The fixed examples and outputs are in `evals/`.
 
-The catalogue is small; requirements may change; synthetic metrics may be optimistic; and the English fallback is not equally capable for Chinese. The next version needs a consented, human-labelled query set, a separate development set for tuning, a second reviewer for source encoding, and a scheduled data refresh process.
+The catalogue has a different check: all 15 rows have a source URL, but that does not mean the catalogue covers the market or that the source is still current. English rules also remain incomplete for some programmes; those cards return `review`.
+
+## Work left
+
+The useful next evaluation would be a small set of consented applicant queries labelled by people, split before any threshold adjustment. The programme data also needs a second reviewer. Neither step was completed for this prototype.

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "T27",
+    "text": "I'm seeking to understand how companies optimize their sales pipelines using data-driven strategies and predictive modeling to boost revenue.",
+    "label": "business"
+  },
+  {
+    "id": "T19",
+    "text": "我对学习如何搭建复杂的计算机网络和维护数据中心的系统架构感兴趣，希望未来从事相关工作。",
+    "label": "systems"
+  },
+  {
+    "id": "T38",
+    "text": "Determining the best ways to improve patient adherence to medication using AI tools fascinates me, blending health and technology.",
+    "label": "abstain"
+  },
+  {
+    "id": "T05",
+    "text": "Exploring natural language understanding to improve chatbot conversations is my main interest; I want to work on algorithms that make machines understand context better.",
+    "label": "ai"
+  },
+  {
+    "id": "T32",
+    "text": "Art and technology intersect in fascinating ways, but I don't want to commit to a tech field; looking for something more creative and open-ended.",
+    "label": "abstain"
+  },
+  {
+    "id": "T12",
+    "text": "I enjoy analyzing market trends and financial data to help firms make smarter investment choices using quantitative models.",
+    "label": "business"
+  },
+  {
+    "id": "T35",
+    "text": "法律科技的进步吸引我，特别是如何用机器学习帮助自动化法律文档审核和合同分析。",
+    "label": "abstain"
+  },
+  {
+    "id": "T09",
+    "text": "Using machine learning to improve computer vision applications such as autonomous driving or medical imaging is where I want to contribute.",
+    "label": "ai"
+  },
+  {
+    "id": "T03",
+    "text": "My passion lies in statistical methods to extract insights from big datasets, aiming to support decision-making in various sectors.",
+    "label": "data"
+  },
+  {
+    "id": "T29",
+    "text": "I want to understand how educational platforms adapt to individual learners using AI, to improve student engagement and outcomes.",
+    "label": "education"
+  },
+  {
+    "id": "T41",
+    "text": "I’ve been involved in prompt engineering and testing language models, but I’m skeptical about their reliability and looking to explore beyond hype.",
+    "label": "abstain"
+  },
+  {
+    "id": "T08",
+    "text": "Focusing on the foundations of programming and understanding operating systems thoroughly is critical for my career switch from biology to tech.",
+    "label": "conversion"
+  },
+  {
+    "id": "T22",
+    "text": "My interest is in building scalable cloud infrastructures that can handle millions of users while ensuring security and uptime.",
+    "label": "systems"
+  },
+  {
+    "id": "T36",
+    "text": "艺术创作和技术的结合让我感到兴奋，但我更倾向于自由表达而非技术密集的研究。",
+    "label": "abstain"
+  },
+  {
+    "id": "T01",
+    "text": "Developing algorithms that allow computers to understand and generate human language in meaningful ways is my academic focus.",
+    "label": "ai"
+  },
+  {
+    "id": "T30",
+    "text": "我想学习统计学和数据分析，以便帮助公司从复杂的数据中提取有价值的商业信息。",
+    "label": "data"
+  },
+  {
+    "id": "T14",
+    "text": "Understanding how businesses can leverage data analytics to enhance customer experiences and increase profitability is my goal.",
+    "label": "business"
+  },
+  {
+    "id": "T06",
+    "text": "I plan to study how AI models can interpret images and videos accurately for applications like medical diagnostics and security.",
+    "label": "ai"
+  },
+  {
+    "id": "T33",
+    "text": "I’m interested in legal studies rather than computing fields; technology only as a tool, not a primary focus.",
+    "label": "abstain"
+  },
+  {
+    "id": "T04",
+    "text": "As someone new to computing, I want to solidify my basics in programming, algorithms, and software design principles.",
+    "label": "conversion"
+  },
+  {
+    "id": "T23",
+    "text": "Developing fault-tolerant distributed systems and improving network protocols excite me; I aim to work on backend infrastructure.",
+    "label": "systems"
+  },
+  {
+    "id": "T16",
+    "text": "Data science fascinates me, particularly the statistical modeling and predictive analytics that can inform policy decisions.",
+    "label": "data"
+  },
+  {
+    "id": "T20",
+    "text": "我希望深入理解IT系统和软件架构，学习如何维护和优化大型企业的技术基础设施。",
+    "label": "systems"
+  },
+  {
+    "id": "T26",
+    "text": "My focus is on integrating AI in education to create personalized learning experiences that adapt to individual student's needs.",
+    "label": "education"
+  },
+  {
+    "id": "T10",
+    "text": "Business strategy supported by quantitative data modeling is where I want to make an impact, combining finance and analytics.",
+    "label": "business"
+  },
+  {
+    "id": "T13",
+    "text": "我想掌握计算机视觉和自然语言处理的核心技术，以推动智能应用创新。",
+    "label": "ai"
+  },
+  {
+    "id": "T21",
+    "text": "Building and managing IT infrastructures that ensure security and scalability in corporate environments is my professional interest.",
+    "label": "systems"
+  },
+  {
+    "id": "T07",
+    "text": "统计数据分析和可视化帮助我理解复杂趋势，我希望利用这些技能支持社会科学研究。",
+    "label": "data"
+  },
+  {
+    "id": "T31",
+    "text": "The intersection of education and technology excites me, especially how adaptive systems can improve learning outcomes.",
+    "label": "education"
+  },
+  {
+    "id": "T18",
+    "text": "As a non-CS background student, I want to grasp the fundamental principles of computing to build a solid technical foundation.",
+    "label": "conversion"
+  },
+  {
+    "id": "T11",
+    "text": "我致力于通过数据分析和机器学习帮助企业优化运营和决策制定过程。",
+    "label": "business"
+  },
+  {
+    "id": "T24",
+    "text": "I’m fascinated by how AI can personalize education, making learning more interactive and effective for diverse learners.",
+    "label": "education"
+  },
+  {
+    "id": "T15",
+    "text": "Analyzing and interpreting complex datasets with statistical tools to answer real-world questions is my main research interest.",
+    "label": "data"
+  },
+  {
+    "id": "T34",
+    "text": "我对医学领域的技术应用感兴趣，但更偏向于临床而非计算机科学方向。",
+    "label": "abstain"
+  },
+  {
+    "id": "T28",
+    "text": "My goal is to develop software systems that are reliable, efficient, and meet user needs in dynamic environments.",
+    "label": "systems"
+  },
+  {
+    "id": "T17",
+    "text": "I want to transition into computing and focus on essential programming skills and understanding software development lifecycle.",
+    "label": "conversion"
+  },
+  {
+    "id": "T25",
+    "text": "Exploring how fintech innovations can transform traditional banking using data-driven solutions is my career aspiration.",
+    "label": "business"
+  }
+]

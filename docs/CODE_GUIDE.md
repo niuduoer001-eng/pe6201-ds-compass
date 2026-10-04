@@ -1,33 +1,51 @@
-# Code guide
+# Code map
 
-## Module map
+Start with `worker.mjs` to see what happens to a request. It validates the body, calls the classifier only for **Other or unsure**, applies a per-minute limit, and returns the recommendation. The programme data and page are embedded at build time.
 
-| File | Responsibility |
-| --- | --- |
-| `index.html` | Accessible browser form, field visibility, request construction, safe result rendering, and the visible method/limitation panel |
-| `worker.mjs` | Hosted request boundary: routes, origin and size checks, validation orchestration, rate limiting, model call, local fallback, and JSON response |
-| `engine.mjs` | Domain logic: validation, English-evidence status, deterministic retrieval, Naive Bayes fallback, and bounded model classification |
-| `build.mjs` | Bundles source data and browser page into the deployable worker without exposing a runtime secret |
-| `local.mjs` | Minimal local Node server for testing the built worker |
-| `test.mjs` | Focused regression tests for high-risk decision boundaries |
-| `data/*.json` | Versioned catalogue, training examples and evaluation summary |
+`engine.mjs` holds the rules used by both the hosted worker and local build:
 
-## How the rules stay legible
+- `validate` checks the study direction, region and IELTS values.
+- `classify` calls OpenRouter and accepts only a known label or `abstain`.
+- `nbPredict` is the local fallback; it tokenises English words and applies Laplace smoothing.
+- `recommend` filters on region and direction.
+- `englishCheck` returns `supported`, `gap` or `review` for IELTS evidence.
 
-`engine.mjs` contains the product rules in named functions rather than embedding them in the interface: `validate`, `englishCheck`, `recommend`, `nbPredict`, and `classify`. `englishCheck` returns one of `supported`, `gap`, or `review`; it never returns full eligibility. `recommend` filters by selected region and domain only. `classify` has a fixed schema and only accepts an allowed label or `abstain`.
+The school, school-background, major and GPA fields are not used by `recommend`. That is intentional and can be confirmed by following the form payload in `index.html` into `worker.mjs` and `engine.mjs`.
 
-## Run, test and deploy
+## Run
 
-Use Node 20 or later.
+The only runtime dependency is Node.js 20 or later. From the repository root:
 
 ```text
 node build.mjs
 node local.mjs
+```
+
+Then visit `http://127.0.0.1:8772`. The local worker has no production secret, so the keyword path uses `nbPredict`.
+
+Run the focused checks with:
+
+```text
 node --test test.mjs
 ```
 
-Open `http://127.0.0.1:8772` after starting the local server. The local environment does not contain the hosted model secret, so Other or unsure uses the English baseline. Production deployment uses `.openai/hosting.json` and a server-side `OPENROUTER_API_KEY`; never commit this key, `.env` files, or browser credentials.
+To recalculate the saved evaluation counts without making API calls:
 
-## Review entry points
+```text
+node evals/replay.mjs
+```
 
-For a fast code review, start with `README.md`, then `docs/PRODUCT_DOCUMENTATION.md`, `engine.mjs`, `worker.mjs`, `data/programmes.json`, and `test.mjs`. This sequence shows product intent, architecture, rules, request boundary, evidence data, and regression coverage.
+## File responsibilities
+
+| File | Responsibility |
+| --- | --- |
+| `index.html` | Form, visible method notes, API request and result cards |
+| `worker.mjs` | Hosted API routes, request checks, rate limit and model/fallback choice |
+| `engine.mjs` | Profile rules, classification, programme filtering and English checks |
+| `build.mjs` | Inserts JSON data and HTML into the worker bundle |
+| `local.mjs` | Local HTTP wrapper around the built worker |
+| `test.mjs` | Five focused rule regression tests |
+| `data/` | Current programme catalogue, fallback examples and metric summary |
+| `evals/` | Frozen classification prompts, recorded labels and replay script |
+
+The code is compact because this is a prototype, but each rule is named and kept in the engine module. The test suite is small: it does not exercise the hosted secret, a live OpenRouter request or every browser interaction.

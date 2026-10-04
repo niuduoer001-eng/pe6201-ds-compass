@@ -1,27 +1,26 @@
-# Data explainer
+# Data notes
 
-## Files and purpose
+## What is in the repository
 
-| File | Purpose | Origin | Personal data |
-| --- | --- | --- | --- |
-| `data/programmes.json` | Retrieval catalogue and encoded English-evidence fields | 15 concise author paraphrases of official university pages | None |
-| `data/train_intents.json` | Synthetic examples for the local Naive Bayes fallback | Author-created synthetic training examples | None |
-| `data/metrics.json` | Frozen evaluation summary and limitations | Recorded project evaluation metadata | None |
+| File | Contents | Source |
+| --- | --- | --- |
+| `data/programmes.json` | 15 programme records, with descriptions and selected entry/English fields | My paraphrases of the official pages linked in each record |
+| `data/train_intents.json` | Examples used by the local Naive Bayes classifier | Synthetic text written for the six direction labels |
+| `data/metrics.json` | Short summary of the Gemini run | Calculated from the saved predictions in `evals/` |
+| `evals/intent_cases.json` | Frozen inputs and expected labels for 37 cases | Synthetic cases created with GPT-4.1 mini assistance |
+| `evals/model_outputs.json` | Returned label and correctness for every case | Recorded OpenRouter response output |
+| `evals/frozen_manifest.json` | SHA-256 hashes for the inputs and outputs used in the reported run | Calculated from the checked-in files |
 
-## Programme catalogue schema
+There are no personal applicant records or historical admissions decisions in these files. The proposal mentioned case data, but I did not use the supplied applicant examples because their labels and permission could not be established well enough to treat them as research data.
 
-Each programme record has an `id`, `school`, `title`, `domain`, `region`, concise `summary`, `academic` note, `source_url`, `language_source`, `verified_on`, and `evidence_type`. Where supported by the selected page, `ielts_min` and `band_min` are recorded. A null English threshold means the system must return **review**; it must not infer a missing rule.
+## Programme fields and sources
 
-The catalogue contains only data needed for this prototype. It excludes applicant names, historical admissions outcomes, application essays, contact details, or scraped personal records.
+Each row in `programmes.json` identifies the programme, school, region and direction, then gives a short summary, an academic entry note, an official programme URL, a language-rule URL, and the date I checked it. IELTS overall and component thresholds are set only where I encoded a rule from the source. `null` means I have not encoded a threshold; the application should show `review` rather than fill it in by assumption.
 
-## Provenance and quality controls
+The summaries are paraphrases. They are not a substitute for the linked pages. I checked the sources in late September 2026, but I have not built an automatic update feed. The 90-day warning can prompt a user to recheck an old record; it cannot catch every change or transcription error.
 
-Programme text is a paraphrase, not a copied university page. The application exposes the original page link on every card so a user can verify the current information. `verified_on` records the snapshot date, and the rule engine marks a source older than 90 days for recheck. This is a limited freshness control: it cannot prove that every transcription is correct or that a page has not changed within the window.
+## Limits of the sample
 
-## Appropriate and inappropriate use
+Fifteen programmes are enough to demonstrate the retrieval flow, but they are not a representative survey of postgraduate options in either country. Some directions have only one or two cards. A result is therefore a starting point for browsing, not a complete comparison set. The profile's school and GPA fields are not joined to the programme data and do not change the output.
 
-The data supports a source-linked discovery shortlist. It does not support admissions prediction, university scoring, population-level claims, or inference about a specific school's admission competitiveness. The optional undergraduate-school field in the interface is not joined to any ranking table and is not used by retrieval.
-
-## Maintenance path
-
-A maintainer should verify each source URL before an admission cycle, add a new snapshot date only after review, retain the previous record in version control, and ask a second reviewer to check changed English rules. Additions should use the same schema and must include a direct official source URL.
+Before expanding the catalogue, I would have another person check each programme URL and English rule. That work has not yet been done.
