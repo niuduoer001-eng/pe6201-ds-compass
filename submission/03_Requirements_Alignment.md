@@ -13,6 +13,7 @@ The proposal called for an AI assisted master's programme tool using official pr
 | Current web application | https://ds-compass-sg-uk-niu.duoer001.chatgpt.site |
 | Five-minute recording script | `submission/02_Demonstration_Script.md` |
 | Final demonstration video | `submission/04_DS_Compass_Final_Demo.mp4` (4 minutes 56 seconds; presenter, screen and spoken narration) |
+| Required self-appraisal cover document | `submission/05_Self_Appraisal_Cover.md` |
 | AI tool use | `submission/00_AI_Assistance_Statement.md` |
 
 The evaluation has a clear limitation: the model only abstained on three of seven out-of-scope cases. The four misses are recorded in `evals/model_outputs.json`; the report discusses them rather than treating the overall accuracy as a reliability claim.
