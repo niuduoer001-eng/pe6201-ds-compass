@@ -1,0 +1,10 @@
+[
+  {"id":"P01","programme_id":"edinburgh-ai","degree":"Computer Science / Software Engineering","expected":"evidence","reason":"Computing is a related discipline for the recorded AI requirement."},
+  {"id":"P02","programme_id":"edinburgh-ai","degree":"Business / Management","expected":"review","reason":"The recorded requirement expects a related discipline with programming and mathematics."},
+  {"id":"P03","programme_id":"ucl-data","degree":"Mathematics","expected":"evidence","reason":"Mathematics is a listed quantitative preparation area."},
+  {"id":"P04","programme_id":"southampton-business","degree":"Economics / Finance","expected":"evidence","reason":"Economics is a listed quantitative preparation area."},
+  {"id":"P05","programme_id":"ntu-education","degree":"Education","expected":"evidence","reason":"Education is directly related to the programme domain; its teaching or work condition remains separate review."},
+  {"id":"P06","programme_id":"ntu-education","degree":"Computer Science / Software Engineering","expected":"review","reason":"The recorded rule includes teaching qualification or education work, which the profile does not evidence."},
+  {"id":"P07","programme_id":"bath-conversion","degree":"Economics / Finance","expected":"evidence","reason":"The programme is a conversion route that records quantitative skills as relevant."},
+  {"id":"P08","programme_id":"bath-conversion","degree":"Computer Science / Software Engineering","expected":"review","reason":"The recorded note says existing computing study may overlap and needs suitability review."}
+]
