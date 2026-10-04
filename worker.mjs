@@ -1,3 +1,5 @@
+// Hosted API boundary. It protects the model key, validates requests, applies
+// rate limits, and delegates all product rules to engine.mjs.
 import {validate,nbPredict,recommend,classify} from './engine.mjs';
 const CATALOGUE=/*CATALOGUE*/ null,TRAIN=/*TRAIN*/ null,METRICS=/*METRICS*/ null,PAGE=/*PAGE*/ null;
 const counts=new Map();
