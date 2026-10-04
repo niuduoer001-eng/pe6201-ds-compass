@@ -10,7 +10,7 @@ The test inputs and expected labels are in `evals/intent_cases.json`. The model'
 
 The final prototype also compares the selected undergraduate major with the programme's recorded academic requirement. This is a deterministic evidence label, not a predicted admission tier. `evidence` means the selected major is broadly related to the requirement; `review` means the requirement includes a condition that the simple profile does not establish, such as mathematics, transcript content, teaching experience, degree equivalence or overlap with a conversion course.
 
-`evals/profile_evidence_cases.json` contains eight hand-specified checks across AI, data, business, education and conversion programmes. `node evals/replay_profile_evidence.mjs` replays them without an API call. They test whether the implemented rule matches the documented design; they do not validate university admissions decisions. I did not use the supplied US historical applicant cases for this check, because their country and programme context do not transfer to Singapore and UK admissions.
+`evals/profile_evidence_cases.json` contains eight hand-specified checks across AI, data, business, education and conversion programmes. `node evals/replay_profile_evidence.mjs` replays them without an API call. They test whether the implemented rule matches the documented design; they do not validate university admissions decisions. I did not use the supplied historical case document for this check: although it includes some UK and Singapore offers, it mixes countries and programme types and has too few comparable unsuccessful outcomes to support calibrated Reach/Match/Safer tiers.
 
 ## Results
 
