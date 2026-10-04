@@ -20,7 +20,7 @@ Now I switch the same profile to a TOEFL iBT total of 99. The result changes to 
 
 ## 5. Where the model is used
 
-My proposal envisaged matching official pages with historical application cases. I could not verify or reuse those country-specific case records, so I narrowed the output to official-source evidence rather than a Reach, Match or Safer prediction. Choosing Artificial Intelligence retrieves the catalogue directly. Under “Other or unsure,” I enter “machine learning and natural language processing.” The hosted classifier selects a fixed direction, then the app retrieves catalogue records. The model does not write programme facts. If its service fails, the app reports a local classifier fallback.
+My proposal envisaged matching official pages with historical application cases. I reviewed the available cases, including some UK and Singapore offers, but they mix countries and programme types and contain too few comparable unsuccessful outcomes to calibrate a fair Reach, Match or Safer prediction from a school name and GPA. I therefore narrowed this first release to official-source evidence. Choosing Artificial Intelligence retrieves the catalogue directly. Under “Other or unsure,” I enter “machine learning and natural language processing.” The hosted classifier selects a fixed direction, then the app retrieves catalogue records. The model does not write programme facts. If its service fails, the app reports a local classifier fallback.
 
 ## 6. What the evaluation measured
 
