@@ -11,7 +11,7 @@
 | `evals/model_outputs.json` | Returned label and correctness for every case | Recorded OpenRouter response output |
 | `evals/frozen_manifest.json` | SHA-256 hashes for the inputs and outputs used in the reported run | Calculated from the checked-in files |
 
-There are no personal applicant records or historical admissions decisions in these files. The proposal mentioned case data, but I did not use the supplied applicant examples because their labels and permission could not be established well enough to treat them as research data.
+There are no personal applicant records or historical admissions decisions in these files. I reviewed the supplied case document, which includes some UK and Singapore offers, but did not incorporate it into the first release. It mixes countries, universities and broad programme labels; it is largely an offer-only collection and contains too few comparable outcomes to calibrate admission tiers from university background and GPA. I therefore keep this prototype focused on official programme evidence rather than presenting a weak historical-case estimate as an admission prediction.
 
 ## Programme fields and sources
 
