@@ -1,5 +1,9 @@
 # AI assistance statement
 
-OpenAI Codex was used as a supporting tool during this project, assisting with initial code drafts, synthetic data preparation, language refinement, documentation and GitHub repository organisation. I developed the main project ideas and approach, provided and verified the reference materials, debugged and revised the code, and made the decisions about changes to the implementation. I also reviewed the evaluation results and wrote the analysis based on my own understanding.
+I independently developed the project’s core ideas, research approach, implementation strategy and evaluation design. I selected and verified the reference materials, debugged and revised the code, interpreted the results, and made the final decisions on changes to the project. These contributions reflect my own reasoning and judgement.
 
-GPT-5.6 Terra assisted with drafting synthetic classification prompts and reference labels. I reviewed and revised these materials; the labels were AI-assisted and should not be considered independent human annotations.
+OpenAI Codex supported this process by assisting with preliminary code drafts, synthetic data preparation, language refinement, documentation and GitHub repository organisation. I critically reviewed and adapted its suggestions to fit my own project objectives and approach.
+
+GPT-5.6 Terra assisted with drafting synthetic classification prompts and reference labels, which I reviewed and revised. These labels were AI-assisted and do not constitute independent human annotations.
+
+I take responsibility for the submitted code, results and report. 
