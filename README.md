@@ -28,7 +28,7 @@ The secret key is configured only in the hosted runtime and is never stored in t
 | `data/` | 15 official-source programme records, synthetic intent examples, and frozen evaluation metrics |
 | `test.mjs` | Automated core-logic tests |
 | `docs/` | Product architecture, data explainer, evaluation explainer, and code guide |
-| `submission/` | Final report, 5-minute demonstration script, requirement alignment, and a non-final silent screen reference |
+| `submission/` | Final report, 5-minute demonstration script, and requirement alignment |
 | `.openai/hosting.json` | Deployment project reference; contains no secret |
 
 ## Run and test locally
@@ -51,7 +51,7 @@ node --test test.mjs
 - `submission/01_Business_and_Technical_Tradeoff_Analysis.pdf` - final analysis
 - `submission/02_Demonstration_Script.md` - narration script
 - `submission/03_Requirements_Alignment.md` - requirement-to-evidence checklist
-- `submission/04_DS_Compass_Demo_Silent.webm` - screen-only reference recording; it is not the final deliverable because the final recording must show the presenter and include spoken audio
+- The final demo video is intentionally not included yet: it must be recorded by the student with face, screen and spoken audio, following `submission/02_Demonstration_Script.md`.
 
 ## Review documents
 
