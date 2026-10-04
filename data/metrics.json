@@ -1,11 +1,25 @@
 {
-  "evaluated_on":"2026-09-29",
-  "task":"Primary study-interest classification only; not admission prediction or programme eligibility.",
-  "test_set":"37 independently generated synthetic held-out cases. GPT-4.1 mini generated and labelled them before Gemini evaluation; one requested 42-case batch returned 37 valid cases and was frozen without supplementation.",
-  "model":"google/gemini-2.5-flash-lite",
-  "accuracy_pct":86.5,
-  "majority_class_baseline_pct":18.9,
-  "abstention_rate_pct":8.1,
-  "abstentions_that_would_be_errors":0,
-  "limitations":"Synthetic labels, small set, and model-generated test authoring are not independent human expert validation. Chinese retrieval remains constrained by English programme metadata."
+  "evaluated_on": "2026-09-29",
+  "task": "Primary study-interest classification only; not programme quality, English eligibility or admission prediction.",
+  "test_set": "37 synthetic cases in evals/intent_cases.json. GPT-4.1 mini assisted with writing and labelling them before the Gemini run.",
+  "model": "google/gemini-2.5-flash-lite",
+  "cases": 37,
+  "correct": 32,
+  "accuracy_pct": 86.5,
+  "majority_label": "abstain",
+  "majority_class_baseline_pct": 18.9,
+  "predicted_abstentions": 3,
+  "abstention_rate_pct": 8.1,
+  "out_of_scope_cases": 7,
+  "out_of_scope_abstained": 3,
+  "out_of_scope_abstention_recall_pct": 42.9,
+  "false_acceptances_out_of_scope": 4,
+  "recorded_model_call_cost_usd": 0.000542,
+  "limitations": "Small synthetic set with model-assisted labels, not independent human validation. Four of seven out-of-scope cases received an in-scope label. English programme metadata and the English-token local fallback limit Chinese performance.",
+  "academic_evidence_regression_check": {
+    "cases": 8,
+    "correct": 8,
+    "accuracy_pct": 100,
+    "scope": "Deterministic regression check for the implemented academic-preparation evidence rule; not an admissions prediction or admissions-accuracy evaluation."
+  }
 }
