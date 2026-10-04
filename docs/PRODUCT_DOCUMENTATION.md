@@ -18,7 +18,7 @@ The user's task is modest: choose a country and a study direction, then use a sm
 
 Each result card shows a programme name, university, country, short description, English-evidence message and an official page link. `supported` means the recorded IELTS threshold is met. `gap` means a recorded score is below a threshold. `review` means the catalogue cannot make that comparison. None of these labels decides academic eligibility.
 
-Each card also exposes the recorded academic requirement and an academic-preparation evidence label. It uses the selected degree only to show whether the degree is broadly related to the recorded requirement or needs manual checking. It does not use school name, 985/211 category or GPA to calculate an offer likelihood. The original proposal mentioned historical admission cases and Reach/Match/Safer labels; those require verified, country-specific outcome data, which this prototype does not hold.
+Each card also exposes the recorded academic requirement and an academic-preparation evidence label. It uses the selected degree only to show whether the degree is broadly related to the recorded requirement or needs manual checking. It does not use school name, 985/211 category or GPA to calculate an offer likelihood. The original proposal mentioned historical admission cases and Reach/Match/Safer labels. I reviewed the available case material, but its mixed countries, programme types and predominantly positive outcomes cannot support calibrated tiers; the first release therefore prioritises a small, auditable official-source workflow.
 
 ## Request path
 
