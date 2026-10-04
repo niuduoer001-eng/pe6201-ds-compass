@@ -20,7 +20,7 @@ Now I switch the same profile to a TOEFL iBT total of 99. The result changes to 
 
 ## 5. Where the model is used
 
-Choosing Artificial Intelligence directly filters the catalogue. I can also choose “Other or unsure” and type short keywords. Here I enter “machine learning and natural language processing.” The hosted classifier returns one of the fixed study directions, then the app retrieves matching records. The model does not write programme facts. If the model service fails, a local classifier is used and the app reports the fallback.
+My proposal envisaged matching official pages with historical application cases. I could not verify or reuse those case records, so I narrowed this prototype. Choosing Artificial Intelligence filters the catalogue directly. Under “Other or unsure,” I enter “machine learning and natural language processing.” The hosted classifier selects a fixed direction, then the app retrieves catalogue records. The model does not write programme facts. If its service fails, the app reports a local classifier fallback.
 
 ## 6. What the evaluation measured
 
