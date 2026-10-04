@@ -1,3 +1,4 @@
+// Focused regression checks for validation, English-rule safety, and abstention boundaries.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {validate,englishCheck,recommend,nbPredict} from './engine.mjs';
