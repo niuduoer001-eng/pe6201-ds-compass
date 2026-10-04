@@ -1,3 +1,4 @@
+// Build step: bundle versioned catalogue data and the browser page into one deployable worker.
 import fs from 'node:fs';
 fs.mkdirSync('dist/server',{recursive:true});
 let worker=fs.readFileSync('worker.mjs','utf8');
