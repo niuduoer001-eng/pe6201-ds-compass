@@ -6,8 +6,10 @@ The labels were written with GPT-4.1 mini assistance, not assigned by independen
 
 The overall score is 32 correct labels out of 37 (86.5%). The baseline predicts the most common label, `abstain`, for every case: 7 of 37 (18.9%). The model returned `abstain` on three prompts. All three were expected abstentions, but it also assigned an in-scope label to four of the seven out-of-scope prompts. That is the main failure to keep in mind when reading the overall accuracy.
 
-One specific error is T38: a prompt about improving medication adherence with AI was labelled `ai`, even though its reference label was `abstain` because the goal concerns healthcare rather than a programme direction in the catalogue. T11, about using data to improve a company's sales pipeline, was labelled `data` instead of `business`. The full list is in `model_outputs.json`.
+One example error is T11: a prompt about using data to improve a company's sales pipeline was labelled `data` instead of `business`. The full list is in `model_outputs.json`.
 
 The 37 calls cost about USD 0.000542 in the recorded provider usage. That is the benchmark run cost only. It excludes test generation and hosting and should not be used as a guaranteed future price.
 
 `replay.mjs` recalculates the summary from the saved files. It does not call the model again; hosted model outputs can change over time.
+
+`profile_evidence_cases.json` and `replay_profile_evidence.mjs` are a separate, deterministic regression check for the academic-preparation evidence shown on each result card. It contains eight hand-specified profile/programme pairs and checks whether the displayed evidence or review label matches the documented rule. Its 100% result means that the implemented rule reproduced these eight expected labels; it is not an admissions-accuracy result.
