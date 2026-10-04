@@ -1,4 +1,30 @@
-// Minimal local server for exercising the built worker without production secrets.
+// Minimal HTTP server for trying the built worker without production secrets.
 import http from 'node:http';
 import worker from './dist/server/index.js';
-http.createServer(async(req,res)=>{try{const chunks=[];for await(const c of req)chunks.push(c);const body=Buffer.concat(chunks);const r=await worker.fetch(new Request('http://127.0.0.1:8772'+req.url,{method:req.method,headers:req.headers,...(body.length?{body}: {})}),process.env);res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));}catch{res.writeHead(500);res.end('Server error')}}).listen(8772,'127.0.0.1',()=>console.log('DS Compass local preview http://127.0.0.1:8772'));
+
+const host = '127.0.0.1';
+const port = 8772;
+
+http.createServer(async (request, response) => {
+  try {
+    const chunks = [];
+    for await (const chunk of request) chunks.push(chunk);
+    const body = Buffer.concat(chunks);
+    const workerResponse = await worker.fetch(
+      new Request(`http://${host}:${port}${request.url}`, {
+        method: request.method,
+        headers: request.headers,
+        ...(body.length ? { body } : {}),
+      }),
+      process.env,
+    );
+
+    response.writeHead(workerResponse.status, Object.fromEntries(workerResponse.headers));
+    response.end(Buffer.from(await workerResponse.arrayBuffer()));
+  } catch {
+    response.writeHead(500);
+    response.end('Server error');
+  }
+}).listen(port, host, () => {
+  console.log(`DS Compass local preview http://${host}:${port}`);
+});
