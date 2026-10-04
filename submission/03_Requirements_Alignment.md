@@ -12,8 +12,9 @@ The proposal called for an AI assisted master's programme tool using official pr
 | Code roles and local run commands | `docs/CODE_GUIDE.md` and `README.md` |
 | Current web application | https://ds-compass-sg-uk-niu.duoer001.chatgpt.site |
 | Five-minute recording script | `submission/02_Demonstration_Script.md` |
+| Final demonstration video | `submission/04_DS_Compass_Final_Demo.mp4` (4 minutes 56 seconds; presenter, screen and spoken narration) |
 | AI tool use | `submission/00_AI_Assistance_Statement.md` |
 
 The evaluation has a clear limitation: the model only abstained on three of seven out-of-scope cases. The four misses are recorded in `evals/model_outputs.json`; the report discusses them rather than treating the overall accuracy as a reliability claim.
 
-The final video is still to be recorded. The course asks for the presenter and screen to appear together with spoken narration. The script is a guide; the student should deliver it naturally, show the real app and pause on the evaluation evidence.
+The final video shows the presenter and screen together with spoken narration. The script is a guide for the demonstrated flow; the recording shows the live app and pauses on the evaluation evidence.
