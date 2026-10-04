@@ -48,6 +48,6 @@ The saved model evaluation got 32 of 37 labels right (86.5%), against 7 of 37 (1
 
 `node evals/replay_profile_evidence.mjs` replays eight profile-to-requirement evidence cases. It checks the deterministic matching rule, not admissions outcomes.
 
-There is no final demo video in this repository yet. The course asks for the student's face, the screen and spoken explanation in a 5-minute recording; `submission/02_Demonstration_Script.md` is the guide for that recording.
+`submission/04_DS_Compass_Final_Demo.mp4` is the final recorded demonstration. It shows the presenter's face, the application screen and spoken explanation in 4 minutes 56 seconds. `submission/02_Demonstration_Script.md` is the narration guide.
 
 The repository does not include an API key or applicant records. The hosted key is configured as a server-side secret.
